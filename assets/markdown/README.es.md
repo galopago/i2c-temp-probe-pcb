@@ -15,7 +15,7 @@ Existen algunos sensores de temperatura a prueba de agua con interfaz I2C real, 
 
 * Codigo abierto
 * Diseñado en KiCad PCB
-* Disponibilidad de archivos fuente
+* Disponibilidad de todos los archivos fuentes
 * Archivos gerber listos para enviar a fabricar: una unidad o panelizados en area de 100x100mm
 * Sabores surtidos
 
@@ -43,58 +43,8 @@ Algo curioso en este modulo, es que el fabricante decidio no conectar directamen
 
 Existen varias versiones de tarjetas, cada una con un sensor de temperatura y dimensiones diferentes:
 
+| SENSOR  | DIMENSIONES | ENLACE                                 |
+|---------|-------------|----------------------------------------|
+| LM75A   |  5.5x35mm   | [LM75A_PROBE_PCB](/LM75A_PROBE_PCB)    |
+| PCT2075 |  4.0x35mm   | [PCT2075_PROBE_PCB](/PCT2075_PROBE_PCB)|
 
-| SENSOR  | DIMENSIONES | ENLACE                    |
-|---------|-------------|---------------------------|
-| LM75A   |  R2         | [MODULE](/LM75A_PROBE_PCB)|
-| PCT2075 |  R10        | 565                       |
-
-
-
-### OVERVOLTAGE
-
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| ROV2  |  R4    | 59E  | 4.02 M |
-| ROV1  |  R3    | 75E  | 5.90 M |
-| ROV1a |  R14   | 0    |    0 M |
-
-### UNDERVOLTAGE
-
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| RUV2  |  R6    | 61E  | 4.22 M |
-| RUV1  |  R5    | 565  | 5.60 M |
-| RUV1a |  R15   | 0    |    0 M |
-
-### VOLTAGE OK
-
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| ROK3  |  R7    | 16E  | 1.43 M |
-| ROK2  |  R9    | 61E  | 4.22 M |
-| ROK1  |  R8    | 63E  | 4.42 M |
-| ROK1a |  R16   | 0    |    0 M |
-
-### OVERTEMPERATURE
-
-| TI ID       | PCB ID | MARK | VALUE |
-|-------------|--------|------|-------|
-| OT_PROG 60  |  R12   | 0    |   0 M |
-| OT_PROG 120 |  R11   | N/A  |   N/A |
-
-
-
-Con los anteriores valores de resistores se obtiene la siguiente configuracion:
-
-| PARAMETER      | VALUE |
-|----------------|-------|
-| VBAT_OV        | 3.15 V|
-| VBAT_UV        | 2.20 V|
-| VBAT_OK        | 2.44 V|
-| VBAT_OK_HYST   | 2.80 V|
-| MPP            | 78 %  |
-| OVERTEMP       | 60 C  |
-
-
-Esta configuracion usa como entrada una celda solar y como elemento de almacenamiento 2 baterias recargables tipo NiMH de 1.25V  en serie.
