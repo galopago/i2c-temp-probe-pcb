@@ -9,7 +9,7 @@ Think in this scenario: you have a buch of I2C sensors tied to a bus (i.e. Humid
 * An additional GPIO pin is required, because I2C signals are incompatible with OneWire
 * Additional libraries will be needed, protocols are very dissimilar in software too
 
-There are some waterproof sensors in the market with real I2C interface, but are not easy to obtain and are expensive
+There are some waterproof sensors in the market with real I2C interface, but are not easy to obtain and are expensive. This document gives you some ideas on how to make your own waterproof I2C temperature sensor in an affordable way.
 
 ## The module in question
 
