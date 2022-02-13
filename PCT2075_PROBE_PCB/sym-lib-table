@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PCT2075GV)(type Legacy)(uri ${KIPRJMOD}/library/PCT2075GV.lib)(options "")(descr ""))
+)

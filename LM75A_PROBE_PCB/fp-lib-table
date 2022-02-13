@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name STRANDEDWIRE)(type KiCad)(uri ${KIPRJMOD}/modules/STRANDEDWIRE.pretty)(options "")(descr ""))
+)
