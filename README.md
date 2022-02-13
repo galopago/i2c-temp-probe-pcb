@@ -4,7 +4,12 @@ Small circuit board, designed to be installed inside a metal tube or thermowell.
 
 Read this in other languages: [Español](/assets/markdown/README.es.md)
 
-This document shows the equivalence between labels written in the module [schematic](/assets/pdf/CJMCU-25504-SCHEMATIC.pdf) and in the IC [datasheet](/assets/pdf/bq25504.pdf).
+Think in this scenario: you have a buch of I2C sensors tied to a bus (i.e. Humidity, pressure, light) and a waterproof temperature sensor is needed, the fastest option is to aquire un of the very popular OneWire type. This bring two big disadvantages:
+
+* An additional GPIO pin is required, because I2C signals are incompatible with OneWire
+* Additional libraries will be needed, protocols are very dissimilar in software too
+
+There are some waterproof sensors in the market with real I2C interface, but are not easy to obtain and are expensive
 
 ## The module in question
 
