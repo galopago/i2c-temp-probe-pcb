@@ -11,20 +11,20 @@ Cuando se tiene un conjunto de sensores en un bus I2C, por ejemplo Humedad, ilum
 
 Lea esto en otros idiomas: [English](../../README.md)
 
-Existen algunos sensores de temperatura a prueba de agua con interfaz I2C real, sinembargo no son tan economicos, ni faciles de conseguir. Este documento pretende dar algunas ideas de como construir tu propio sensos de temperatura I2C a prueba de agua
+Existen algunos sensores de temperatura a prueba de agua con interfaz I2C real, sinembargo no son tan faciles de conseguit, ni tan economicos como los OneWire. Este documento pretende dar algunas ideas de como construir tu propio sensos de temperatura I2C a prueba de agua a un precio razonable.
 
 
 ## El circuito impreso
 
-La unica marca visible en el circuito impreso es CJMCU-25504, no hay referencias visibles al fabricante. La serigrafia de los componentes es dificil de leer.
+La tarjeta se diseño del menor tamaño posible, pero usando componentes de montaje superficial que puedan ser soldados a mano.
 
 ![MODULE](/assets/img/pcb.jpg)
 
-## Mapa de resistores
+## Cableado
 
-El siguiente grafico muestra visualmente cada uno de los resistores, con el nombre de la etiqueta como la usa el fabricante, y con el nombre de la etiqueta que empleo el fabricante del modulo.
+Se uso un cable recubierto multihilos de 5 vias. 
 
-![MODULE](/assets/img/CJMCU-25504-RESISTORS.svg)
+![MODULE](/assets/img/wired.jpg)
 
 ## Mapa de conectores
 El siguiente grafico muestra visualmente cada uno de los conectores con el nombre de la etiqueta que empleo el fabricante del integrado. 
