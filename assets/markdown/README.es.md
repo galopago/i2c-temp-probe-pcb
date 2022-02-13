@@ -1,16 +1,24 @@
 # PCB PARA SENSOR DE TEMPERATURA I2C TIPO SONDA
 
-El modulo CJMCU-25504 basado en el circuito integrado para cosecha de energia BQ25504, tiene incorporados todos los componentes externos necesarios para usarlo. La configuracion de los diferentes parametros de este integrado se realiza mediante resistores, sin embargo, la serigrafia no es clara, lo que hace dificil identificar los componentes. Adicional a esto, el fabricante del modulo emplea unas etiquetas diferentes a las que usa el fabricante del integrado lo cual aumenta mas la confusion.
+Circuito impreso de pequeñas dimensiones, pensado para ser usado como sonda dentro de un tubo de acero inoxidable o termopozo. 
 
 Lea esto en otros idiomas: [English](../../README.md)
 
-Este documento pretende presentar las equivalencias entre las etiquetas utilizadas por el fabricante del modulo en el [esquematico](/assets/pdf/CJMCU-25504-SCHEMATIC.pdf) y circuito impreso, con las expuestas por el fabricante del integrado en su [hoja de datos](/assets/pdf/bq25504.pdf). De esta forma sera mucho mas facil realizar cambios a los componentes para ajustarlo a nuestras propias necesidades
+Cuando se tiene un conjunto de sensores en un bus I2C, por ejemplo Humedad, iluminacion, presion, etc. y se requiere agregar un sensor de temperatura a prueba de agua para fluidos, la opcion mas rapida es emplear un dispositivo del tipo OneWire bastante populares en el mercado. Esto tiene 2 inconvenientes:
 
-## El modulo en cuestion
+* Se requiere un pin GPIO adicional para el sensor OneWire, pues estos son incompatibles con las señales I2C
+* Se requieren librerias adicionales, pues en la capa de software los protocolos son muy diferentes
+
+Lea esto en otros idiomas: [English](../../README.md)
+
+Existen algunos sensores de temperatura a prueba de agua con interfaz I2C real, sinembargo no son tan economicos, ni faciles de conseguir. Este documento pretende dar algunas ideas de como construir tu propio sensos de temperatura I2C a prueba de agua
+
+
+## El circuito impreso
 
 La unica marca visible en el circuito impreso es CJMCU-25504, no hay referencias visibles al fabricante. La serigrafia de los componentes es dificil de leer.
 
-![MODULE](/assets/img/CJMCU-25504-MODULE.png)
+![MODULE](/assets/img/pcb.jpg)
 
 ## Mapa de resistores
 
