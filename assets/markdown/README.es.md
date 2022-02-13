@@ -9,10 +9,15 @@ Cuando se tiene un conjunto de sensores en un bus I2C, por ejemplo Humedad, ilum
 * Se requiere un pin GPIO adicional para el sensor OneWire, pues estos son incompatibles con las señales I2C
 * Se requieren librerias adicionales, pues en la capa de software los protocolos son muy diferentes
 
-Lea esto en otros idiomas: [English](../../README.md)
-
 Existen algunos sensores de temperatura a prueba de agua con interfaz I2C real, sinembargo no son tan faciles de conseguit, ni tan economicos como los OneWire. Este documento pretende dar algunas ideas de como construir tu propio sensos de temperatura I2C a prueba de agua a un precio razonable.
 
+## Generalidades
+
+* Codigo abierto
+* Diseñado en KiCad PCB
+* Disponibilidad de archivos fuente
+* Archivos gerber listos para enviar a fabricar: una unidad o panelizados en area de 100x100mm
+* Sabores surtidos
 
 ## El circuito impreso
 
@@ -30,21 +35,21 @@ Se uso un cable recubierto multihilos de 5 vias: VCC,GND,SDA,SCL y ALARMA
 
 La tarjeta puede instalarse dentro de un tubo metalico de acero inoxidable o dentro de un termopozo. Se requerira un poco de silicona conductora de calor en el area del sensor y pegamento epoxico para sellar y fijar el cable en la boca del tubo
 
-
 ![MODULE](/assets/img/waterproofing.jpg)
 
 Algo curioso en este modulo, es que el fabricante decidio no conectar directamente el divisor de voltaje formado por ROC1 y ROC2 al pin VOC_SAMP, sino que enruto el punto medio del divisor y el pin VOC_SAMP hacia el conector header, de forma tal que se puede optar por configurar el MPPT o deshabilitarlo mediante conexiones externas.
 
-## Valores de los resistores del modulo
-En las siguientes tablas se expone los valores que trae el modulo de fabrica. Estos valores coinciden exactamente con los del ejemplo presentado en la hoja de datos del componente. 
+## Versiones
 
-### MPPT
+Existen varias versiones de tarjetas, cada una con un sensor de temperatura y dimensiones diferentes:
 
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| ROC2  |  R2    | 63E  | 4.42 M |
-| ROC1  |  R10   | 565  | 5.60 M |
-| ROC1a |  R1    | 106  | 10.0 M |
+
+| SENSOR  | DIMENSIONES | ENLACE                    |
+|---------|-------------|---------------------------|
+| LM75A   |  R2         | [MODULE](/LM75A_PROBE_PCB)|
+| PCT2075 |  R10        | 565                       |
+
+
 
 ### OVERVOLTAGE
 
