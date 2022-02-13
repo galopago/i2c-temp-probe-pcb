@@ -11,11 +11,18 @@ Think in this scenario: you have a buch of I2C sensors tied to a bus (i.e. Humid
 
 There are some waterproof sensors in the market with real I2C interface, but are not easy to obtain and are expensive. This document gives you some ideas on how to make your own waterproof I2C temperature sensor in an affordable way.
 
-## The module in question
+## Generalidades
 
+* Open source
+* Designed in KiCad PCB
+* All source files available
+* Gerver files available : single piece or 100x100mm panel
+* Assorted flavors
+
+## The printed circuit board
 The only visible marking on the PCB is CJMCU-25504, there are no references to the manufacturer. Silkscreens are unreadable.
 
-![MODULE](/assets/img/CJMCU-25504-MODULE.png)
+![MODULE](/assets/img/pcb.jpg)
 
 ## Resistor map
 
