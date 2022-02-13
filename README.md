@@ -4,96 +4,45 @@ Small circuit board, designed to be installed inside a metal tube or thermowell.
 
 Read this in other languages: [Español](/assets/markdown/README.es.md)
 
-Think in this scenario: you have a buch of I2C sensors tied to a bus (i.e. Humidity, pressure, light) and a waterproof temperature sensor is needed, the fastest option is to aquire un of the very popular OneWire type. This bring two big disadvantages:
+Imagine this scenario: you have a bunch of I2C sensors tied to a bus (i.e. Humidity, pressure, light) and a waterproof temperature sensor is needed, the fastest option is to acquire one of the very popular OneWire type. This brings two big disadvantages:
 
-* An additional GPIO pin is required, because I2C signals are incompatible with OneWire
+* An additional GPIO pin (and wire!) is required, because I2C signals are incompatible with OneWire
 * Additional libraries will be needed, protocols are very dissimilar in software too
 
-There are some waterproof sensors in the market with real I2C interface, but are not easy to obtain and are expensive. This document gives you some ideas on how to make your own waterproof I2C temperature sensor in an affordable way.
+There are very few waterproof temperature sensors in the market with a real I2C interface, but are not easy to obtain and are expensive. This document gives you some ideas on how to build your own waterproof I2C temperature sensor in an affordable way.
 
-## Generalidades
-
+## Main features
 * Open source
 * Designed in KiCad PCB
 * All source files available
-* Gerver files available : single piece or 100x100mm panel
+* Gerber files available : single piece or 100x100mm panel
 * Assorted flavors
 
-## The printed circuit board
-The only visible marking on the PCB is CJMCU-25504, there are no references to the manufacturer. Silkscreens are unreadable.
+## Printed circuit board
+
+The PCB was designed to be as small as possible, but using SMD components that can be hand soldered. All pull-up resistors can be populated on the board. There are also onboard solder jumper pads for I2C address setup.
 
 ![MODULE](/assets/img/pcb.jpg)
 
-## Resistor map
+## Wiring
 
-The following image presents visually each resistor with both labels: IC manufacturer and module manufacturer.
+Multi conductor cable with 5 stranded wires used for VCC,GND,SDA,SCL and ALARM signals
 
-![MODULE](/assets/img/CJMCU-25504-RESISTORS.svg)
+![MODULE](/assets/img/wired.jpg)
 
-## Pinout
+## Waterprofing
 
-The following image presents visually each header pin with a label exactly written as in the IC manufacturer datasheet.
+The board could be fitted inside a stainless steel tube or thermowell. Some thermal silicone grease must be applied in the sensor zone, and epoxy glue near the cable input for sealing 
 
-![MODULE](/assets/img/CJMCU-25504-PINOUT.svg)
-
-In this module the voltage divider made of ROC1 and ROC2 is not connected to VOC_SAMP pin. Instead the middle point of the divider and VOC_SAMP signals are routed to header pins. MPPT could be enabled or disabled externally.
-
-## Module resistor values
-
-The following tables show the values of the resistors that came soldered into the PCB. Those values are exactly the same found in the IC sample design pdf.
-
-### MPPT
-
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| ROC2  |  R2    | 63E  | 4.42 M |
-| ROC1  |  R10   | 565  | 5.60 M |
-| ROC1a |  R1    | 106  | 10.0 M |
-
-### OVERVOLTAGE
-
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| ROV2  |  R4    | 59E  | 4.02 M |
-| ROV1  |  R3    | 75E  | 5.90 M |
-| ROV1a |  R14   | 0    |    0 M |
-
-### UNDERVOLTAGE
-
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| RUV2  |  R6    | 61E  | 4.22 M |
-| RUV1  |  R5    | 565  | 5.60 M |
-| RUV1a |  R15   | 0    |    0 M |
-
-### VOLTAGE OK
-
-| TI ID | PCB ID | MARK | VALUE  |
-|-------|--------|------|--------|
-| ROK3  |  R7    | 16E  | 1.43 M |
-| ROK2  |  R9    | 61E  | 4.22 M |
-| ROK1  |  R8    | 63E  | 4.42 M |
-| ROK1a |  R16   | 0    |    0 M |
-
-### OVERTEMPERATURE
-
-| TI ID       | PCB ID | MARK | VALUE |
-|-------------|--------|------|-------|
-| OT_PROG 60  |  R12   | 0    |   0 M |
-| OT_PROG 120 |  R11   | N/A  |   N/A |
+![MODULE](/assets/img/waterproofing.jpg)
 
 
-Here are the configuration parameters obtained with the aforementioned resistor values:
+## Versions
+
+There are several board versions, each one with different sensor and PCB sizes
 
 
-| PARAMETER      | VALUE |
-|----------------|-------|
-| VBAT_OV        | 3.15 V|
-| VBAT_UV        | 2.20 V|
-| VBAT_OK        | 2.44 V|
-| VBAT_OK_HYST   | 2.80 V|
-| MPP            | 78 %  |
-| OVERTEMP       | 60 C  |
-
-This configuration uses a solar cell as input and 2x 1.25V NiMH rechargeable batteries in series as a storage device
-
+| SENSOR  | SIZE        | LINK                                   |
+|---------|-------------|----------------------------------------|
+| LM75A   |  5.5x35mm   | [LM75A_PROBE_PCB](/LM75A_PROBE_PCB)    |
+| PCT2075 |  4.0x35mm   | [PCT2075_PROBE_PCB](/PCT2075_PROBE_PCB)|
