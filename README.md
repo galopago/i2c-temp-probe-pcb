@@ -1,6 +1,6 @@
-# CJMCU-25504 MODULE HELPER
+# PROBE STYLE I2C TEMPERATURE SENSOR PCB
 
-CJMCU-25504 module based on BQ25504 energy harvesting chip, have built-in all external components needed for immediate use. Parameter setup is done using resistors, however, resistors silkscreen characters are unreadable and output pin labels are not exactly written as in the IC datasheet.
+Small circuit board, designed to be installed inside a metal tube or thermowell.
 
 Read this in other languages: [Español](/assets/markdown/README.es.md)
 
