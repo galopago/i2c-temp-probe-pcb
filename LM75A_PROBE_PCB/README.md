@@ -17,5 +17,13 @@ The PCB was developed in KiCad V5.1,
 
 ## Board pinout
 
-![BOARD_PINOUT](/assets/img/pinout.svg)
+![BOARD_PINOUT](assets/img/pinout.svg)
 
+
+## Panelized boards
+
+![PCB_PANEL](assets/img/panel_front.jpg)
+
+## Wired board
+
+![PCB_PANEL](assets/img/wired.jpg)
