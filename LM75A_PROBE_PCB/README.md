@@ -1,6 +1,6 @@
 # PROBE STYLE I2C TEMPERATURE SENSOR PCB
 
-Small circuit board(5.5x35mm), based on [LM75A](assets/pdf/lm75a.pdf) chip, designed to be installed inside a metal tube or thermowell.
+Small circuit board (5.5x35mm), based on [LM75A](assets/pdf/lm75a.pdf) chip, designed to be installed inside a metal tube or thermowell.
 
 ![PCB_FRONT_BACK](assets/img/front_back.jpg)
 
