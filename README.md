@@ -34,8 +34,9 @@ Multi conductor cable with 5 stranded wires used for VCC,GND,SDA,SCL and ALARM s
 
 The board could be fitted inside a stainless steel tube or thermowell. Some thermal silicone grease must be applied in the sensor zone, and epoxy glue near the cable input for sealing 
 
-![MODULE](/assets/img/waterproofing.jpg)
+![STEELTUBE](/assets/img/waterproofing.jpg)
 
+![THERMOWELL](/assets/img/thermowell.jpg)
 
 ## Versions
 

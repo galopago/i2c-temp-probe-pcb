@@ -35,7 +35,9 @@ Se uso un cable recubierto multihilos de 5 conductores: VCC,GND,SDA,SCL y ALARMA
 
 La tarjeta puede instalarse dentro de un tubo metalico de acero inoxidable o dentro de un termopozo. Se requerira un poco de silicona conductora de calor en el area del sensor y pegamento epoxico para sellar y fijar el cable en la boca del tubo
 
-![MODULE](/assets/img/waterproofing.jpg)
+![TUBOACERO](/assets/img/waterproofing.jpg)
+
+![THERMOPOZO](/assets/img/thermowell.jpg)
 
 ## Versiones
 
