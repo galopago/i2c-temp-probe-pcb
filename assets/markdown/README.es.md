@@ -45,6 +45,6 @@ Existen varias versiones de tarjetas, cada una con un sensor de temperatura y di
 
 | SENSOR  | DIMENSIONES | ENLACE                                 |
 |---------|-------------|----------------------------------------|
-| LM75A   |  5.5x35mm   | [LM75A_PROBE_PCB](/LM75A_PROBE_PCB)    |
-| PCT2075 |  4.0x35mm   | [PCT2075_PROBE_PCB](/PCT2075_PROBE_PCB)|
+| LM75A   |  5.5x35mm   | [lm75A-probe-pcb](/lm75A-probe-pcb)    |
+| PCT2075 |  4.0x35mm   | [pct2075-probe-pcb](/pct2075-probe-pcb)|
 
